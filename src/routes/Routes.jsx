@@ -8,6 +8,8 @@ import ManageMyFood from "../components/pages/manageMyFood/ManageMyFood";
 import MyFoodReq from "../components/pages/myFoodReq/MyFoodReq";
 import AvailableFood from "../components/pages/AvailableFood/AvailableFood";
 import AddFood from "../components/pages/AddFood/AddFood";
+import FoodDetails from "../components/pages/home/FoodDetails";
+import PrivateRoute from "../components/pages/home/PrivateRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -28,11 +30,23 @@ export const router = createBrowserRouter([
       },
       {
         path: "/available-food",
-        element: <AvailableFood></AvailableFood>,
+        element: (
+          <PrivateRoute>
+            <AvailableFood></AvailableFood>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/add-food",
         element: <AddFood></AddFood>,
+      },
+      {
+        path: "/food-details/:id",
+        element: (
+          <PrivateRoute>
+            <FoodDetails></FoodDetails>
+          </PrivateRoute>
+        ),
       },
     ],
   },
