@@ -4,7 +4,7 @@ const Banner = () => {
     <div className=" h-[400px] my-7  ">
       <div className="relative h-full">
         <img
-          className="h-full transform transition-all hover:scale-105 w-full object-cover rounded-lg"
+          className="h-full transform transition-all hover:scale-105  w-full object-cover rounded-lg"
           src={bannerImg}
           alt=""
         />

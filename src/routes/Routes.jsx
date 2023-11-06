@@ -35,6 +35,7 @@ export const router = createBrowserRouter([
             <AvailableFood></AvailableFood>
           </PrivateRoute>
         ),
+        loader: () => fetch("featuredFood.json"),
       },
       {
         path: "/add-food",
@@ -47,6 +48,7 @@ export const router = createBrowserRouter([
             <FoodDetails></FoodDetails>
           </PrivateRoute>
         ),
+        loader: () => fetch("../../public/featuredFood.json"),
       },
     ],
   },

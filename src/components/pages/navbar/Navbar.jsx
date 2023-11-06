@@ -45,46 +45,58 @@ const Navbar = () => {
               </NavLink>
             </li>
 
-            <li>
-              <NavLink
-                to="/available-food"
-                className={({ isActive }) => {
-                  isActive ? "btn btn-md bg-[#0C4428]" : "btn btn-md btn-ghost";
-                }}
-              >
-                Available Foods
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/add-food"
-                className={({ isActive }) => {
-                  isActive ? "btn btn-md bg-[#0C4428]" : "btn btn-md btn-ghost";
-                }}
-              >
-                Add Food
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/manage-food"
-                className={({ isActive }) => {
-                  isActive ? "btn btn-md bg-[#0C4428]" : "btn btn-md btn-ghost";
-                }}
-              >
-                Manage My Foods
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/request-food"
-                className={({ isActive }) => {
-                  isActive ? "btn btn-md bg-[#0C4428]" : "btn btn-md btn-ghost";
-                }}
-              >
-                My Food Request
-              </NavLink>
-            </li>
+            {user && (
+              <>
+                <li>
+                  <NavLink
+                    to="/available-food"
+                    className={({ isActive }) => {
+                      isActive
+                        ? "btn btn-md bg-[#0C4428]"
+                        : "btn btn-md btn-ghost";
+                    }}
+                  >
+                    Available Foods
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/add-food"
+                    className={({ isActive }) => {
+                      isActive
+                        ? "btn btn-md bg-[#0C4428]"
+                        : "btn btn-md btn-ghost";
+                    }}
+                  >
+                    Add Food
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/manage-food"
+                    className={({ isActive }) => {
+                      isActive
+                        ? "btn btn-md bg-[#0C4428]"
+                        : "btn btn-md btn-ghost";
+                    }}
+                  >
+                    Manage My Foods
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/request-food"
+                    className={({ isActive }) => {
+                      isActive
+                        ? "btn btn-md bg-[#0C4428]"
+                        : "btn btn-md btn-ghost";
+                    }}
+                  >
+                    My Food Request
+                  </NavLink>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <Link className="btn btn-ghost normal-case text-xl  bg-[#508101] hover:bg-[#6eb103] text-white">
@@ -104,52 +116,66 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          <li>
-            <NavLink
-              to="/available-food"
-              className={({ isActive }) => {
-                isActive ? "btn btn-md bg-[#0C4428]" : "btn btn-md btn-ghost";
-              }}
-            >
-              Available Foods
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/add-food"
-              className={({ isActive }) => {
-                isActive ? "btn btn-md bg-[#0C4428]" : "btn btn-md btn-ghost";
-              }}
-            >
-              Add Food
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/manage-food"
-              className={({ isActive }) => {
-                isActive ? "btn btn-md bg-[#0C4428]" : "btn btn-md btn-ghost";
-              }}
-            >
-              Manage My Foods
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/request-food"
-              className={({ isActive }) => {
-                isActive ? "btn btn-md bg-[#0C4428]" : "btn btn-md btn-ghost";
-              }}
-            >
-              My Food Request
-            </NavLink>
-          </li>
+          {user && (
+            <>
+              <li>
+                <NavLink
+                  to="/available-food"
+                  className={({ isActive }) => {
+                    isActive
+                      ? "btn btn-md bg-[#0C4428]"
+                      : "btn btn-md btn-ghost";
+                  }}
+                >
+                  Available Foods
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/add-food"
+                  className={({ isActive }) => {
+                    isActive
+                      ? "btn btn-md bg-[#0C4428]"
+                      : "btn btn-md btn-ghost";
+                  }}
+                >
+                  Add Food
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/manage-food"
+                  className={({ isActive }) => {
+                    isActive
+                      ? "btn btn-md bg-[#0C4428]"
+                      : "btn btn-md btn-ghost";
+                  }}
+                >
+                  Manage My Foods
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/request-food"
+                  className={({ isActive }) => {
+                    isActive
+                      ? "btn btn-md bg-[#0C4428]"
+                      : "btn btn-md btn-ghost";
+                  }}
+                >
+                  My Food Request
+                </NavLink>
+              </li>
+            </>
+          )}
         </ul>
       </div>
       <div className="navbar-end">
         {user ? (
           <>
-            <span className="text-xl font-semibold text-green-500 mr-2 flex items-end">{user.email}</span>
+            <span className="text-xl font-semibold text-green-500 mr-2 flex items-end">
+              {user.email}
+            </span>
             <button
               onClick={handleLogout}
               className="btn btn-md bg-[#508101] hover:bg-[#6eb103] text-white"

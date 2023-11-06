@@ -1,7 +1,7 @@
 [
   {
-    "id": 1,
-    "food_name": "Canned Soup",
+    "food_id": 1,
+    "food_name": "Desert",
     "food_img": "https://i.ibb.co/5RsPJXW/pastries-1178884-1280.jpg",
     "donator": "John Doe",
     "quantity": 10,
@@ -9,7 +9,7 @@
     "expired_date": "2023-12-31"
   },
   {
-    "id": 2,
+    "food_id": 2,
     "food_name": "Fresh Orange",
     "food_img": "https://i.ibb.co/mBc18N4/mandarins-1721597-1280.jpg",
     "donator": "Jane Smith",
@@ -18,8 +18,8 @@
     "expired_date": "2023-11-15"
   },
   {
-    "id": 3,
-    "food_name": "Pasta",
+    "food_id": 3,
+    "food_name": "Pizza",
     "food_img": "https://i.ibb.co/HNmKBdB/pizza-2776188-1280.jpg",
     "donator": "Mike Johnson",
     "quantity": 5,
@@ -27,7 +27,7 @@
     "expired_date": "2024-02-28"
   },
   {
-    "id": 4,
+    "food_id": 4,
     "food_name": "Bread",
     "food_img": "https://i.ibb.co/HNmKBdB/pizza-2776188-1280.jpg",
     "donator": "Sarah Williams",
@@ -36,7 +36,7 @@
     "expired_date": "2023-11-10"
   },
   {
-    "id": 5,
+    "food_id": 5,
     "food_name": "Rice",
     "food_img": "https://i.ibb.co/nbG27mR/top-view-perfect-long-rice-brown-bowl-wooden-board-gray-background.jpg",
     "donator": "Robert Davis",
@@ -45,7 +45,7 @@
     "expired_date": "2023-12-15"
   },
   {
-    "id": 6,
+    "food_id": 6,
     "food_name": "Baked Chicken",
     "food_img": "https://i.ibb.co/Cv80vTv/roasted-chicken-legs-with-red-onion.jpg",
     "donator": "Emily Taylor",

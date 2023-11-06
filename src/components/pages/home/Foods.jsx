@@ -16,7 +16,7 @@ const Foods = () => {
           Find Food Resources Near You
         </h2>
       </div>
-      <div className="grid grid-cols-3 my-8 gap-2">
+      <div className="grid grid-cols-3 my-8 gap-4">
         {foods.map((food, index) => (
           <Food food={food} key={index}></Food>
         ))}
