@@ -14,7 +14,7 @@ const ManageMyFood = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div>
+      <div className="grid grid-cols-2 mx-auto">
         {addedFoods.map((item) => (
           <OrderedFood orderedFood={item} key={item.food_id}></OrderedFood>
         ))}
